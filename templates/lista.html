@@ -1,0 +1,14 @@
+{% extends "szablon.html" %}
+{% block tytul %}Quiz - lista pyań{% endblock %}
+{% block h1 %}Quiz - lista pyań{% endblock %}
+
+{% block tresc %}
+    <ol>
+    {% for p in pytania %}
+        <li>{{ p.pytanie }}
+            <a href="{{ url_for('edytuj', pid=p.id) }}" class="btn btn-secondary btn-sm"> Edytuj</a>
+            <a href="{{ url_for('usun', pid=p.id) }}" class="btn btn-danger btn-sm"> Usuń</a>
+        </li>
+    {% endfor %}
+    </ol>
+{% endblock %}

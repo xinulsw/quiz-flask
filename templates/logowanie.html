@@ -1,0 +1,11 @@
+{% extends "szablon.html" %}
+{% block tytul %}Quiz - logowanie{% endblock %}
+{% block h1 %}Quiz - logowanie{% endblock %}
+
+{% block tresc %}
+	{% if current_user.is_authenticated %}
+  	<p>Jesteś już zalogowany jako: {{ current_user.nazwa }}!</p>
+  {% else %}
+		{% include('login_form.html') %}
+	{% endif %}
+{% endblock %}

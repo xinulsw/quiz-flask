@@ -1,0 +1,9 @@
+{% extends "szablon.html" %}
+{% block tytul %}Quiz - zalogowano{% endblock %}
+{% block h1 %}Quiz - zalogowano{% endblock %}
+
+{% block tresc %}
+  {% if current_user.is_authenticated %}
+    Witaj {{ current_user.nazwa }}!
+  {% endif %}
+{% endblock %}

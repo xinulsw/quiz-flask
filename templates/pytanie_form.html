@@ -1,0 +1,18 @@
+    <form method="POST">
+      {{ form.csrf_token }}
+
+      {{ form.pytanie.label }}<br>
+      {{ form.pytanie }}<br>
+      <br>
+      {{ form.kategoria.label }}<br>
+      {{ form.kategoria }}<br>
+      <br>
+      <label>Podaj odpowiedzi i zaznacz poprawną: </label>
+      <ol>
+        {% for o in form.odpowiedzi%}
+          <li>{{ o }}</li>
+        {% endfor %}
+      </ol>
+
+    <input type="submit" value="Prześlij">
+    </form>
